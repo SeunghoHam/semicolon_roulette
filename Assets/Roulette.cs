@@ -71,5 +71,6 @@ public class Roulette : MonoBehaviour
         isFinish =false;
         isStart = false;
         reStart.SetActive(true);
+        
     }
 }
