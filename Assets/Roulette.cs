@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class Roulette : MonoBehaviour
 {
-    [Header("rollingSpeed")]
     public float rotSpeed = 5f;
-
-    [Header("rollingSound")]
-    public AudioSource roulettesound;
-
-    [Header("endImage")]
     public GameObject endImage;    
-    public GameObject reStart;
     
-    [Header("particle")]
     public ParticleSystem endParticle;
 
 
@@ -28,7 +20,6 @@ public class Roulette : MonoBehaviour
         isStart = false;
         isFinish = false;
         endImage.SetActive(false);
-        reStart.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,7 +28,6 @@ public class Roulette : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             speed= rotSpeed;
-            roulettesound.Play();
             isStart = true;
         }
         transform.Rotate(0,0,this.speed);
@@ -70,7 +60,5 @@ public class Roulette : MonoBehaviour
 
         isFinish =false;
         isStart = false;
-        reStart.SetActive(true);
-        
     }
 }
